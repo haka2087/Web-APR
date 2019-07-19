@@ -1,3 +1,5 @@
+<?php include("seguridad.php"); ?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,9 @@
 	<title></title>
 </head>
 
-<a class="boton_menu" href="menu.html">Menu</a>
+<a class="boton_menu" href="menu.php">Menu</a>
+    <a class="boton_menu" href="salir.php">Salir</a>
+
 
 <?php
 

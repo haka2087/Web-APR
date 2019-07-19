@@ -6,7 +6,8 @@
 	<title></title>
 </head>
 
-<a class="boton_pers" href="menu.html">Menu</a>
+<a class="boton_pers" href="menu.php">Menu</a>
+<a class="boton_pers" href="salir.php">Salir</a>
 
 <?php
 

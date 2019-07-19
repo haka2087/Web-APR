@@ -1,3 +1,5 @@
+<?php include("seguridad.php"); ?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,9 @@
 	<title></title>
 </head>
 
-<a class="boton_me" href="menu.html">Menu</a>
+<a class="boton_me" href="menu.php">Menu</a>
+<a class="boton_me" href="salir.php">Salir</a>
+
 
 <?php
 
@@ -33,7 +37,7 @@ $update = mysqli_query($conexion, "SELECT * FROM registros");
 			<th class="th">NOMBRE</th>
 			<th class="th">APELLIDO</th>
 			<th class="th">DIRECCION</th>
-			<th class="th">SECTOR</th>
+			<!--<th class="th">SECTOR</th>-->
 			<th class="th">FECHA</th>
 			<th class="th">RUT</th>
 			<th class="th">MES</th>
@@ -57,7 +61,7 @@ while ( $row=mysqli_fetch_array($update)) {?>
     <td><?php echo $row['nombre'] ?></td>
     <td><?php echo $row['apellido'] ?></td>
     <td><?php echo $row['direccion'] ?></td>
-    <td><?php echo $row['sector'] ?></td>
+    <!--<td><?php echo $row['sector'] ?></td>-->
     <td><?php echo $row['fecha']?></td>
     <td><?php echo $row['rut'] ?></td>
     <td><?php echo $row['mes'] ?></td>

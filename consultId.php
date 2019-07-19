@@ -10,7 +10,6 @@ $username = "id9909986_pruebas";
 $baseDatos = "id9909986_bd_pruebas";
 $password = "agua2019";
 
-
 $conexion = mysqli_connect($server,$username,$password,$baseDatos);
 
 $update = mysqli_query($conexion, "SELECT id FROM usuario order by id desc limit 1");

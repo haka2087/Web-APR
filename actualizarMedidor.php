@@ -1,3 +1,5 @@
+<?php include("seguridad.php"); ?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,9 @@
 	<title></title>
 </head>
 
-<a class="boton_pers" href="menu.html">Menu</a>
+<a class="boton_pers" href="menu.php">Menu</a>
+<a class="boton_pers" href="salir.php">Salir</a>
+
 
 <?php
 
@@ -71,12 +75,12 @@ while ( $row=mysqli_fetch_array($update)) {?>
     </div>
     <br>
     <div>
-	<a>Numero de Medidor Nuevo</a>
+	<a>Numero de Medidor</a>
 	<br>
 	<br>
 </div>
     <div>
-         <label id="nominput" >Ingrese Número de Medidor:</label>
+         <label id="nominput" >Ingrese Nuevo Número de Medidor:</label>
         <br>
         <input class="input" type="text" name="medidor"/>
     </div>

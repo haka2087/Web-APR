@@ -18,11 +18,13 @@ $password = "agua2019";
 
 $conexion = mysqli_connect($server,$username,$password,$baseDatos);
 
-$update = mysqli_query($conexion, "INSERT INTO usuario (medidor, nombre, apellido, rut, direccion, sector) VALUES ($medidor, '$nombre', '$apellido', $rut, '$direccion','$sector')"); 
+$update = mysqli_query($conexion, "INSERT INTO usuario (medidor, nombre, apellido, rut, direccion, sector, correo) VALUES ($medidor, '$nombre', '$apellido', $rut, '$direccion','$sector','null')"); 
 
 
 
 mysqli_close($conexion);
+
+ echo "<script>alert('Usuario registrado con éxito. clic en aceptar para continuar');window.location.href='ingresarUsuarios.php';</script>";
 
 
  ?>
