@@ -1,0 +1,14 @@
+.tabla{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	background-color: #89CBFA;
+	
+}
+
+.th{
+	color: white;
+	text-align: center;
+	background-color: #10578A;
+}

@@ -1,0 +1,54 @@
+body {
+	background-image: url("img/fondo.jpg");
+}
+
+a{
+	margin-top: 1px;
+	color:gray;
+	font-size: 30px;
+	
+}
+
+#box {
+ 	margin-top: 20px;
+  	background: #ffffff;
+  	padding: 1%;
+  	width: 300px;
+  	height: 550px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	-webkit-box-shadow: 0px 0px 18px -1px rgba(168,165,168,1);
+	-moz-box-shadow: 0px 0px 18px -1px rgba(168,165,168,1);
+	box-shadow: 0px 0px 18px -1px rgba(168,165,168,1);
+
+  	
+}
+
+#form {
+	margin-top: 20px;
+	display: inline-block;
+}
+#nominput {
+	color: gray;
+
+}
+
+.input {
+	
+  	padding: 5%;
+  	width: 150%;
+
+}
+
+.button {
+	  margin-top: 30px;
+	  background-color: gray;
+	  border: none;
+	  color: white;
+	  padding: 10px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+
+}
