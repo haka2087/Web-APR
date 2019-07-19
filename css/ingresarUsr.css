@@ -2,12 +2,29 @@ body {
 	background-image: url("img/fondo.jpg");
 }
 
-a{
+.boton_m{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: gray;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid gray;
+  }
+.boton_m:hover{
+  color: red;
+}
+
+
+.a{
 	margin-top: 1px;
 	color:gray;
 	font-size: 30px;
 	
 }
+
+
 
 #box {
  	margin-top: 20px;

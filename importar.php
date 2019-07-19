@@ -14,8 +14,8 @@ $variable=$_GET["var"];
 //echo $variable2;
 //echo $variable3;*/
 $server = "localhost";
-$username = "id9909986_apr";
-$baseDatos = "id9909986_apr";
+$username = "id9909986_pruebas";
+$baseDatos = "id9909986_bd_pruebas";
 $password = "agua2019";
 
 

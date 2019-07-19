@@ -7,8 +7,8 @@ $pass=$_POST["pass"];
 //n$pass="admin3";
 
 $server = "localhost";
-$username = "id9909986_apr";
-$baseDatos = "id9909986_apr";
+$username = "id9909986_pruebas";
+$baseDatos = "id9909986_bd_pruebas";
 $password = "agua2019";
 
 
@@ -23,7 +23,8 @@ if ($user == $row['usuario'] and $pass == $row['contrasena']) {
 
 	header("Location: menu.html"); 
 }else{
-	echo "No pass";
+	header("Location: login.html");
+
 }
 
 mysqli_close($conexion);

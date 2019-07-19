@@ -1,14 +1,37 @@
+.boton_me{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: gray;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 2px solid gray;
+  }
+
+.boton_me:hover{
+  color: red;
+}
+
 .tabla{
+	margin-top:20px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
 	width: 100%;
 	text-align: center;
-	background-color: #89CBFA;
+	background-color: #ffffff;
+	border:1px;
+	border-color: gray;
+	border-left-color: #ffffff;
+  border-right-color: #ffffff;
+	color:gray;
+	-webkit-box-shadow: 0px 7px 18px -1px rgba(168,165,168,1);
+	-moz-box-shadow: 0px 7px 18px -1px rgba(168,165,168,1);
+	box-shadow: 0px 7px 18px -1px rgba(168,165,168,1);
 	
 }
 
 .th{
-	color: white;
+	color: gray;
 	text-align: center;
-	background-color: #10578A;
-}
+	background-color: #ffffff;
