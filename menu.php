@@ -24,6 +24,16 @@
 			<br>
 		<br>
 		<button class="button" onclick="window.location.href = 'pago.php';"> Control de Pagos</button>
+		<br>
+		<br>
+		<button class="button" onclick="window.location.href = 'editarLectura.php';"> Editar Lectrura </button>
+			<br>
+		<br>
+		<button class="button" onclick="window.location.href = 'verRegLecturas.php';"> Ver registro de ediciones </button>
+			<br>
+		<br>
+		<button class="button" onclick="window.location.href = 'borrarMedidor.php';"> Borrar Medidor </button>
+			<br>
 	</div>
 
 </body>

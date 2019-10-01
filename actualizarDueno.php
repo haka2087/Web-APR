@@ -15,8 +15,8 @@
 <?php
 
 $server = "localhost";
-$username = "id9909986_pruebas";
-$baseDatos = "id9909986_bd_pruebas";
+$username = "id10155249_aguabd";
+$baseDatos = "id10155249_aguabd";
 $password = "agua2019";
 
 
@@ -33,8 +33,8 @@ $update = mysqli_query($conexion, "SELECT * FROM usuario");
 			<th class="th">MEDIDOR</th>
 			<th class="th">NOMBRE</th>
 			<th class="th">APELLIDO</th>
+			<th class="th">DIRRECCIÓN</th>
 			<th class="th">RUT</th>
-			<th class="th">DIRECCION</th>
 			<th class="th">SECTOR</th>
 			
 
@@ -91,9 +91,9 @@ while ( $row=mysqli_fetch_array($update)) {?>
     </div>
     <br>
     <div>
-         <label id="nominput" >Rut:</label>
+         <label id="nominput" >Rut:(Ingrese Rut sin puntos y sin guión)</label>
         <br>
-        <input class="input" type="text" name="rut"/>
+        <input class="input" type="number" name="rut"/>
     </div>
     <br>
     <div>

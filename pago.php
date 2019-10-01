@@ -12,8 +12,8 @@
 <?php
 
 $server = "localhost";
-$username = "id9909986_pruebas";
-$baseDatos = "id9909986_bd_pruebas";
+$username = "id10155249_aguabd";
+$baseDatos = "id10155249_aguabd";
 $password = "agua2019";
 
 
@@ -38,7 +38,7 @@ $update = mysqli_query($conexion, "SELECT * FROM registros WHERE mes=$id2");
 			<th class="th">NOMBRE</th>
 			<th class="th">APELLIDO</th>
             <th class="th">DIRECCION</th>
-            <th class="th">SECTOR</th>
+            
             <th class="th">FECHA</th>
             <th class="th">RUT</th>
 			
@@ -56,11 +56,11 @@ while ( $row=mysqli_fetch_array($update)) {?>
     <td><?php echo $row['nombre'] ?></td>
     <td><?php echo $row['apellido'] ?></td>
     <td><?php echo $row['direccion'] ?></td>
-    <td><?php echo $row['sector'] ?></td>
+    
     <td><?php echo $row['fecha'] ?></td>
      <td><?php echo $row['rut'] ?></td>
         
-    <td><?php echo $row['sector'] ?></td>
+    
 
  </tr>
 	
@@ -90,7 +90,7 @@ while ( $row=mysqli_fetch_array($update)) {?>
 	<br>
 </div>
     <div>
-         <label id="nominput" >Ingrese si Cliente realizó pago: </label>
+         <label id="nominput" >Ingrese SI/NO Cliente realizó pago: </label>
         <br>
         <input class="input" type="text" name="pago"/>
     </div>

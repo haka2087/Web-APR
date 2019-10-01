@@ -60,13 +60,13 @@ while ( $row=mysqli_fetch_array($update)) {?>
 
 <div id="box">
 <div>
-	<a>Usuario</a>
+	<a>Borrar Medidor</a>
 </div>
-<form id="form" action="actualizarDatosMedidor.php" method="post">
+<form id="form" action="borrarMed.php" method="post">
     <div>
-        <label id="nominput" >Ingrese rut Usuario:</label>
+        <label id="nominput" >Ingrese Medidor a borrar:</label>
         <br>
-        <input class="input" type="text" name="rut"/>
+        <input class="input" type="text" name="medidor"/>
 
     </div>
     <div>
@@ -74,19 +74,10 @@ while ( $row=mysqli_fetch_array($update)) {?>
 
     </div>
     <br>
-    <div>
-	<a>Numero de Medidor</a>
-	<br>
-	<br>
-</div>
-    <div>
-         <label id="nominput" >Ingrese Nuevo Número de Medidor:</label>
-        <br>
-        <input class="input" type="text" name="medidor"/>
-    </div>
+    
      <br>
     <div>
-        <button class="button" type="submit">Actualizar</button>
+        <button class="button" type="submit">Borrar</button>
     </div>
     
 </form>

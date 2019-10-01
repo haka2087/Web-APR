@@ -7,10 +7,9 @@ $rut=(int)$_POST["rut"];
 //$rut=324442223;
 
 $server = "localhost";
-$username = "id9909986_pruebas";
-$baseDatos = "id9909986_bd_pruebas";
+$username = "id10155249_aguabd";
+$baseDatos = "id10155249_aguabd";
 $password = "agua2019";
-
 
 
 $conexion = mysqli_connect($server,$username,$password,$baseDatos);

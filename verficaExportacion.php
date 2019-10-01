@@ -1,18 +1,7 @@
 <?php
 
 $variable=$_GET["var"];
-//$variable2=$_POST["var2"];
-//$variable3=$_POST["var3"];
 
-//$variable= 4;
-//$variable2= 11111;
-//$variable3= '2222222443556';
-
-//$variable = 123;
-
-//echo $variable;
-//echo $variable2;
-//echo $variable3;*/
 $server = "localhost";
 $username = "id10155249_aguabd";
 $baseDatos = "id10155249_aguabd";
@@ -21,14 +10,15 @@ $password = "agua2019";
 
 $conexion = mysqli_connect($server,$username,$password,$baseDatos);
 
-$update = mysqli_query($conexion, "SELECT * FROM usuario where id = $variable");
-
-
+$update = mysqli_query($conexion, "SELECT fecha FROM registros order by id desc limit 1");
 
 //while ( $row=mysqli_fetch_array($update)) {
 $row=mysqli_fetch_array($update);
-printf ($row['medidor']);
-printf (",");
+$fecha = $row['fecha'];
+$mes = substr($fecha, 2,2);
+
+printf ($mes);
+/*printf (",");
 printf ($row['nombre']);
 printf (",");
 printf ($row['apellido']);
@@ -37,7 +27,7 @@ printf ($row['rut']);
 printf (",");
 printf ($row['direccion']);
 printf (",");
-printf ($row['id']);
+printf ($row['id']);*/
 
 
 //}
