@@ -1,17 +1,18 @@
 <?php
-
+include'conexion.php';
 //$variable=$_GET["var"];
 
 //echo $variable;
 //echo $variable2;
 //echo $variable3;*/
+/*
 $server = "localhost";
-$username = "id10155249_aguabd";
-$baseDatos = "id10155249_aguabd";
+$username = "id9909986_pruebas";
+$baseDatos = "id9909986_bd_pruebas";
 $password = "agua2019";
 
 
-$conexion = mysqli_connect($server,$username,$password,$baseDatos);
+$conexion = mysqli_connect($server,$username,$password,$baseDatos);*/
 
  //$inserccion = mysqli_query($conexion, "INSERT INTO registros (medidor, lectura, pago, monto, nombre, apellido, direccion, sector, fecha, rut) VALUES //('null','null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 1232312)"); 
 

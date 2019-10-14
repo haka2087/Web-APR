@@ -1,4 +1,7 @@
+
 <?php include("seguridad.php"); ?> 
+
+
 
 <!DOCTYPE html>
 <html>
@@ -13,14 +16,15 @@
 
 
 <?php
+include'conexion.php';
 
-$server = "localhost";
-$username = "id10155249_aguabd";
-$baseDatos = "id10155249_aguabd";
+/*$server = "localhost";
+$username = "id9909986_pruebas";
+$baseDatos = "id9909986_bd_pruebas";
 $password = "agua2019";
 
 
-$conexion = mysqli_connect($server,$username,$password,$baseDatos);
+$conexion = mysqli_connect($server,$username,$password,$baseDatos);*/
 
 $update = mysqli_query($conexion, "SELECT * FROM usuario");
 

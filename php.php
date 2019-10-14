@@ -1,4 +1,5 @@
 <?php
+include'conexion.php';
 ////////////RECEPCION DE DATOS DESDE EL SMARTFONE
 
 $medidor=(int)$_POST["medidor"];
@@ -14,43 +15,35 @@ $fecha=(int)$_POST["fecha"];
 $rut=$_POST["rut"];
 $mes1= substr((string)$fecha,-6,2);
 $mes=(int)$mes1;
-
-
-////////////CONEXION A BASE DE DATOS
-
-$server = "localhost";
-$username = "id10155249_aguabd";
-$baseDatos = "id10155249_aguabd";
-$password = "agua2019";
-
-$conexion = mysqli_connect($server,$username,$password,$baseDatos);
-
+$anio = substr((string)$fecha,-4,4);
+$anio2= (int)$anio;
 //////////////////////////CALCULO DE MONTO
 
 //SACA MES DE LA VARIBLE FECHA
 $fechaActual = substr($fecha, -6,2); //02
-//echo $fechaActual;
-//$fechaAnterior = (int)$fechaActual - 1; //no 01 sino que 1
-//echo $fechaAnterior;
 
-/*$lecturaAnterior = mysqli_query($conexion, "SELECT lectura, medidor FROM registros WHERE medidor = $medidor and mes = $fechaAnterior");
-   $row2=mysqli_fetch_array($lecturaAnterior);
-   $lecAnt = $row2['lectura'];
-    $lecMed = $row2['medidor'];*/
-
-  // echo $lecAnt;
    $lecAct = $lectura;
-   //$monto = ($lecAct - $lecAnt) * 350 + 2000;
-   
-   	//echo $lecAnt;
-   	//echo $lecMed;
+  
 $num = 1;
 
-while($num < 3){
+while($num < 12){
+
+if($num == 12){
+
+  $monto=$lectura * 350 + 2000;
+  break;
+}
     
 $fechaAnterior = (int)$fechaActual - $num;
+//echo "$fechaAnterior";
 
-$lecturaAnterior = mysqli_query($conexion, "SELECT lectura, medidor FROM registros WHERE medidor = $medidor and mes = $fechaAnterior");
+if($fechaAnterior == 0){
+  $fechaActual=13;
+  $anio2 = $anio2 -1;
+  continue;
+}
+
+$lecturaAnterior = mysqli_query($conexion, "SELECT lectura, medidor FROM registros WHERE medidor = $medidor and mes = $fechaAnterior and anio = $anio2");
    $row2=mysqli_fetch_array($lecturaAnterior);
    $lecAnt = $row2['lectura'];
    $lecMed = $row2['medidor'];
@@ -72,7 +65,7 @@ $row1=mysqli_fetch_array($id);
 $id2=$row1[0];
 
 
-$verificar = mysqli_query($conexion, "SELECT medidor FROM registros WHERE mes=$mes and medidor= $medidor");
+$verificar = mysqli_query($conexion, "SELECT medidor FROM registros WHERE mes=$mes and medidor= $medidor and fecha = $fecha");
 $row3=mysqli_fetch_array($verificar);
 $lect=$row3[0];
 
@@ -88,7 +81,7 @@ if($lect == $medidor ){
     
 }else{
     
-    $update = mysqli_query($conexion, "INSERT INTO registros (medidor, lectura, pago, monto, nombre, apellido, direccion, sector, fecha, rut, mes) VALUES ($medidor,$lectura, 'No', '$monto', '$nombre', '$apellido', '$direccion', '$sector', $fecha, $rut, $mes)"); 
+    $update = mysqli_query($conexion, "INSERT INTO registros (medidor, lectura, pago, monto, nombre, apellido, direccion, sector, fecha, rut, mes, anio) VALUES ($medidor,$lectura, 'No', '$monto', '$nombre', '$apellido', '$direccion', '$sector', $fecha, $rut, $mes, '$anio')"); 
 
  printf("El registo del medidor ".$medidor." se realizo correctamente");
 

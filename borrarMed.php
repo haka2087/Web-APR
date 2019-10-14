@@ -1,17 +1,17 @@
 <?php
-
+include'conexion.php';
 $medidor=(int)$_POST["medidor"];
 
 
 //$medidor=55555;
 //$rut=324442223;
-
+/*
 $server = "localhost";
-$username = "id10155249_aguabd";
-$baseDatos = "id10155249_aguabd";
+$username = "id9909986_pruebas";
+$baseDatos = "id9909986_bd_pruebas";
 $password = "agua2019";
 
-$conexion = mysqli_connect($server,$username,$password,$baseDatos);
+$conexion = mysqli_connect($server,$username,$password,$baseDatos);*/
 
 $idUl = mysqli_query($conexion, "SELECT id FROM usuario order by id desc limit 1");
 $row2=mysqli_fetch_array($idUl);
@@ -41,10 +41,10 @@ while($cont <= $row2['id']){
         $cont2 = $cont2 + 2;
         $cont = $cont + 1;
     }
-    
+
+   
 
 }
-    $auto = mysqli_query($conexion,"ALTER TABLE usuario AUTO_INCREMENT = $idU");
 
 
   header("Location: borrarMedidor.php");
